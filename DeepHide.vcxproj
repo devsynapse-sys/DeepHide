@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{8ceb83e2-e276-46e9-92be-0202e5ebe891}</ProjectGuid>
+    <RootNamespace>CryptoForge</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <ProjectName>DeepHide</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(ProjectDir)Libraries\;$(ProjectDir)Libraries\cryptopp\;$(ProjectDir)Libraries\oqs\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)Libraries\cryptopp\lib;$(ProjectDir)Libraries\oqs\lib;$(LibraryPath)</LibraryPath>
+    <TargetName>DeepHide</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Libraries\cryptopp\lib\cryptlib.lib" />
+    <Library Include="Libraries\oqs\lib\oqs-internal.lib" />
+    <Library Include="Libraries\oqs\lib\oqs.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Encryptors\AES_Encryptor.hpp" />
+    <ClInclude Include="Encryptors\ChaCha20_Encryptor.hpp" />
+    <ClInclude Include="Encryptors\Encryptor.hpp" />
+    <ClInclude Include="Encryptors\Kyber_Encryptor.hpp" />
+    <ClInclude Include="Libraries\cryptopp\aes.h" />
+    <ClInclude Include="Libraries\cryptopp\algparam.h" />
+    <ClInclude Include="Libraries\cryptopp\allocate.h" />
+    <ClInclude Include="Libraries\cryptopp\argnames.h" />
+    <ClInclude Include="Libraries\cryptopp\authenc.h" />
+    <ClInclude Include="Libraries\cryptopp\basecode.h" />
+    <ClInclude Include="Libraries\cryptopp\chacha.h" />
+    <ClInclude Include="Libraries\cryptopp\chachapoly.h" />
+    <ClInclude Include="Libraries\cryptopp\config.h" />
+    <ClInclude Include="Libraries\cryptopp\config_align.h" />
+    <ClInclude Include="Libraries\cryptopp\config_asm.h" />
+    <ClInclude Include="Libraries\cryptopp\config_cpu.h" />
+    <ClInclude Include="Libraries\cryptopp\config_cxx.h" />
+    <ClInclude Include="Libraries\cryptopp\config_dll.h" />
+    <ClInclude Include="Libraries\cryptopp\config_int.h" />
+    <ClInclude Include="Libraries\cryptopp\config_misc.h" />
+    <ClInclude Include="Libraries\cryptopp\config_ns.h" />
+    <ClInclude Include="Libraries\cryptopp\config_os.h" />
+    <ClInclude Include="Libraries\cryptopp\config_ver.h" />
+    <ClInclude Include="Libraries\cryptopp\cryptlib.h" />
+    <ClInclude Include="Libraries\cryptopp\filters.h" />
+    <ClInclude Include="Libraries\cryptopp\fips140.h" />
+    <ClInclude Include="Libraries\cryptopp\hex.h" />
+    <ClInclude Include="Libraries\cryptopp\hkdf.h" />
+    <ClInclude Include="Libraries\cryptopp\hmac.h" />
+    <ClInclude Include="Libraries\cryptopp\integer.h" />
+    <ClInclude Include="Libraries\cryptopp\iterhash.h" />
+    <ClInclude Include="Libraries\cryptopp\misc.h" />
+    <ClInclude Include="Libraries\cryptopp\modes.h" />
+    <ClInclude Include="Libraries\cryptopp\osrng.h" />
+    <ClInclude Include="Libraries\cryptopp\poly1305.h" />
+    <ClInclude Include="Libraries\cryptopp\queue.h" />
+    <ClInclude Include="Libraries\cryptopp\randpool.h" />
+    <ClInclude Include="Libraries\cryptopp\rijndael.h" />
+    <ClInclude Include="Libraries\cryptopp\rng.h" />
+    <ClInclude Include="Libraries\cryptopp\secblock.h" />
+    <ClInclude Include="Libraries\cryptopp\secblockfwd.h" />
+    <ClInclude Include="Libraries\cryptopp\seckey.h" />
+    <ClInclude Include="Libraries\cryptopp\sha.h" />
+    <ClInclude Include="Libraries\cryptopp\simple.h" />
+    <ClInclude Include="Libraries\cryptopp\smartptr.h" />
+    <ClInclude Include="Libraries\cryptopp\stdcpp.h" />
+    <ClInclude Include="Libraries\cryptopp\strciphr.h" />
+    <ClInclude Include="Libraries\cryptopp\trap.h" />
+    <ClInclude Include="Libraries\oqs\include\oqs\aes.h" />
+    <ClInclude Include="Libraries\oqs\include\oqs\aes_ops.h" />
+    <ClInclude Include="Libraries\oqs\include\oqs\common.h" />
+    <ClInclude Include="Libraries\oqs\include\oqs\kem.h" />
+    <ClInclude Include="Libraries\oqs\include\oqs\kem_classic_mceliece.h" />
+    <ClInclude Include="Libraries\oqs\include\oqs\kem_frodokem.h" />
+    <ClInclude Include="Libraries\oqs\include\oqs\kem_kyber.h" />
+    <ClInclude Include="Libraries\oqs\include\oqs\kem_ml_kem.h" />
+    <ClInclude Include="Libraries\oqs\include\oqs\kem_ntruprime.h" />
+    <ClInclude Include="Libraries\oqs\include\oqs\oqs.h" />
+    <ClInclude Include="Libraries\oqs\include\oqs\oqsconfig.h" />
+    <ClInclude Include="Libraries\oqs\include\oqs\rand.h" />
+    <ClInclude Include="Libraries\oqs\include\oqs\rand_nist.h" />
+    <ClInclude Include="Libraries\oqs\include\oqs\sha2.h" />
+    <ClInclude Include="Libraries\oqs\include\oqs\sha2_ops.h" />
+    <ClInclude Include="Libraries\oqs\include\oqs\sha3.h" />
+    <ClInclude Include="Libraries\oqs\include\oqs\sha3x4.h" />
+    <ClInclude Include="Libraries\oqs\include\oqs\sha3x4_ops.h" />
+    <ClInclude Include="Libraries\oqs\include\oqs\sha3_ops.h" />
+    <ClInclude Include="Libraries\oqs\include\oqs\sig.h" />
+    <ClInclude Include="Libraries\oqs\include\oqs\sig_cross.h" />
+    <ClInclude Include="Libraries\oqs\include\oqs\sig_dilithium.h" />
+    <ClInclude Include="Libraries\oqs\include\oqs\sig_falcon.h" />
+    <ClInclude Include="Libraries\oqs\include\oqs\sig_mayo.h" />
+    <ClInclude Include="Libraries\oqs\include\oqs\sig_ml_dsa.h" />
+    <ClInclude Include="Libraries\oqs\include\oqs\sig_snova.h" />
+    <ClInclude Include="Libraries\oqs\include\oqs\sig_sphincs.h" />
+    <ClInclude Include="Libraries\oqs\include\oqs\sig_stfl.h" />
+    <ClInclude Include="Libraries\oqs\include\oqs\sig_uov.h" />
+    <ClInclude Include="Utils\CliParser.hpp" />
+    <ClInclude Include="Utils\ConsoleManager.hpp" />
+    <ClInclude Include="Utils\FileIO.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
