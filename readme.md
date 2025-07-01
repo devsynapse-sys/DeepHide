@@ -69,3 +69,5 @@ public:
 
 - **MSVC/g++**  
   В зависимости от платформы — основной компилятор. Проект также содержит `.sln` для Visual Studio и `CMakeLists.txt`.
+
+  test
